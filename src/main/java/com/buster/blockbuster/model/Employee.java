@@ -1,23 +1,33 @@
 package com.buster.blockbuster.model;
 
 public class Employee {
-    private Long id;
+    private Integer id;
     private String name;
     private String lastName;
     private Double salary;
+    private Manager manager;
 
-    public Employee(Long id, String name, String lastName, Double salary) {
+    public Employee(Integer id, String name, String lastName, Double salary, Manager manager) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.salary = salary;
+        this.manager = manager;
     }
 
-    public Long getId() {
+    public Manager getManager() {
+        return manager;
+    }
+
+    public void setManager(Manager manager) {
+        this.manager = manager;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -52,6 +62,7 @@ public class Employee {
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", salary=" + salary +
+                ", manager=" + manager +
                 '}';
     }
 }

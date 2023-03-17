@@ -2,24 +2,24 @@ package com.buster.blockbuster.model;
 
 public class Client {
 
-    private Long id;
+    private Integer id;
     private String name;
     private String email;
     private Boolean state;
 
 
-    public Client(Long id, String name, String email, Boolean state) {
+    public Client(Integer id, String name, String email, Boolean state) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.state = state;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

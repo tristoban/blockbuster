@@ -25,14 +25,14 @@ public class ClientDaoH2 implements IDao<Client> {
             Class.forName(DB_JDBC_DRIVER);
             connection = DriverManager.getConnection(DB_URL,DB_USER,DB_PASSWORD);
 
-            preparedStatement = connection.prepareStatement("INSERT INTO cliente(name,email) VALUES(?,?)", Statement.RETURN_GENERATED_KEYS);
+            preparedStatement = connection.prepareStatement("INSERT INTO client(name,email) VALUES(?,?)", Statement.RETURN_GENERATED_KEYS);
 
             preparedStatement.setString(1, client.getName());
             preparedStatement.setString(2, client.getEmail());
-
-            preparedStatement.executeQuery();
+            //updatea la linea 30 y 31 cargando la data
+            preparedStatement.executeUpdate();
             ResultSet keys = preparedStatement.getGeneratedKeys();
-            if(keys.next()) client.setId(keys.getLong(1));
+            if(keys.next()) client.setId(keys.getInt(1));
 
             preparedStatement.close();
         } catch(SQLException | ClassNotFoundException throwables){
@@ -47,12 +47,12 @@ public class ClientDaoH2 implements IDao<Client> {
     }
 
     @Override
-    public Client searchById(Long id) {
+    public Client searchById(Integer id) {
         return null;
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(Integer id) {
 
     }
 

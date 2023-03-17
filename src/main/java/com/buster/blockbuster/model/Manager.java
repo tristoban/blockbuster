@@ -4,27 +4,25 @@ import java.util.List;
 
 public class Manager {
 
-    private Long id;
+    private Integer id;
     private String name;
     private String lastName;
     private Double salary;
     private List<Employee> team;
-    private Manager manager;
 
-    public Manager(Long id, String name, String lastName, Double salary, List<Employee> team, Manager manager) {
+    public Manager(Integer id, String name, String lastName, Double salary, List<Employee> team) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.salary = salary;
         this.team = team;
-        this.manager = manager;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -60,14 +58,6 @@ public class Manager {
         this.team = team;
     }
 
-    public Manager getManager() {
-        return manager;
-    }
-
-    public void setManager(Manager manager) {
-        this.manager = manager;
-    }
-
     @Override
     public String toString() {
         return "Manager{" +
@@ -76,7 +66,6 @@ public class Manager {
                 ", lastName='" + lastName + '\'' +
                 ", salary=" + salary +
                 ", team=" + team +
-                ", manager=" + manager +
                 '}';
     }
 }

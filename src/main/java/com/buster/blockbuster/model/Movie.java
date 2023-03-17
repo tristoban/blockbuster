@@ -2,13 +2,13 @@ package com.buster.blockbuster.model;
 
 
 public class Movie {
-    private Long id;
+    private Integer id;
     private String name;
     private Integer releaseDate;
     private Integer stock;
     private Double rentPrice;
 
-    public Movie(Long id, String name, Integer releaseDate, Integer stock, Double rentPrice) {
+    public Movie(Integer id, String name, Integer releaseDate, Integer stock, Double rentPrice) {
         this.id = id;
         this.name = name;
         this.releaseDate = releaseDate;
@@ -16,11 +16,11 @@ public class Movie {
         this.rentPrice = rentPrice;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
