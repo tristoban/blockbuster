@@ -1,0 +1,12 @@
+body {
+  background-color: #fff; /* Cambia el color de fondo a blanco */
+}
+
+.mr-white {
+  background-color: #fff;
+}
+
+#form-add-clt-container {
+  display: none;
+  margin: 2rem;
+}
